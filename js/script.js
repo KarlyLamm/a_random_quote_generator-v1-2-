@@ -43,7 +43,7 @@ let quotes=[
   },
 
 ]
-
+// Above is the array of quotes that will be randomly selected to show on the screen as well as source, cite, and year
 
 
 /***
@@ -51,8 +51,9 @@ let quotes=[
 ***/
 function getRandomQuote(){
 let ranNumber=Math.floor(Math.random()*quotes.length);
+// this equation allows the program to pick a random number between 0 and the amount of quotes in the above array
 let randomQuote=quotes[ranNumber];
-
+//this assigns the random number to an actual object in the array, so it will print the object instead of a number
 return randomQuote;
 }
 
@@ -62,6 +63,7 @@ return randomQuote;
 ***/
 function printQuote(){
 let shownQuote=getRandomQuote()
+// this is a variable to use this function within the scope of this new function
 let html='<p class="quotes">'+shownQuote.quote+'</p>'
 html+='<p class="source">'+shownQuote.source
 
@@ -76,7 +78,7 @@ html+='<span class="year">'+shownQuote.year+'</span>'
 '</p>'
 
 document.getElementById('quote-box').innerHTML = html;
-
+// this assigns the html variable within this function to the HTML to be viewable on the application
 }
 
 
