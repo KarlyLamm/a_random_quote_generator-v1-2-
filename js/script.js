@@ -64,7 +64,7 @@ return randomQuote;
 function printQuote(){
 let shownQuote=getRandomQuote()
 // this is a variable to use this function within the scope of this new function
-let html='<p class="quotes">'+shownQuote.quote+'</p>'
+let html='<p class="quote">'+shownQuote.quote+'</p>'
 html+='<p class="source">'+shownQuote.source
 
 
